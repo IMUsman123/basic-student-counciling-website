@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Guidance Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>CareerGuide</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#quiz" class="nav-link">Career Quiz</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Discover Your Perfect Career Path</h1>
+                <p class="hero-description">
+                    Take our comprehensive career assessment quiz and unlock personalized career recommendations 
+                    based on your interests, skills, and personality traits.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#quiz" class="btn btn-primary">Start Career Quiz</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Smart Matching</h3>
+                    <p>AI-powered career recommendations</p>
+                </div>
+                <div class="floating-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Growth Focused</h3>
+                    <p>Future-ready career paths</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="quiz-section">
+        <div class="container">
+            <h2 class="section-title">Career Assessment Quiz</h2>
+            <p class="section-description">
+                Answer these questions to discover careers that match your interests and skills.
+            </p>
+            
+            <div class="quiz-container" id="quizContainer">
+                <div class="quiz-intro" id="quizIntro">
+                    <div class="quiz-card">
+                        <h3>Ready to Discover Your Career Path?</h3>
+                        <p>This quiz will take approximately 5-10 minutes to complete. Be honest with your answers for the best results.</p>
+                        <button class="btn btn-primary" onclick="startQuiz()">Begin Quiz</button>
+                    </div>
+                </div>
+                
+                <div class="quiz-questions" id="quizQuestions" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="question-container" id="questionContainer">
+                        <!-- Questions will be dynamically loaded here -->
+                    </div>
+                    <div class="quiz-navigation">
+                        <button class="btn btn-secondary" id="prevBtn" onclick="previousQuestion()" style="display: none;">Previous</button>
+                        <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">Next</button>
+                    </div>
+                </div>
+                
+                <div class="quiz-results" id="quizResults" style="display: none;">
+                    <!-- Results will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Career Guidance</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Your Journey to Success Starts Here</h3>
+                    <p>
+                        Our career guidance platform is designed to help students and professionals make informed 
+                        decisions about their future. Using advanced assessment techniques and comprehensive career data, 
+                        we provide personalized recommendations that align with your unique interests and skills.
+                    </p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-brain"></i>
+                            <h4>Smart Assessment</h4>
+                            <p>Advanced algorithms analyze your responses to provide accurate career matches.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-database"></i>
+                            <h4>Comprehensive Database</h4>
+                            <p>Access to extensive career information including required skills and growth prospects.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h4>Mobile Friendly</h4>
+                            <p>Take the quiz anywhere, anytime with our responsive design.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CareerGuide</h4>
+                    <p>Empowering students to make informed career decisions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#quiz">Career Quiz</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@careerguide.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CareerGuide. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
